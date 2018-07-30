@@ -75,5 +75,11 @@ public class StopwatchActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanseState) {
+        super.onSaveInstanceState(savedInstanseState);
+        savedInstanseState.putInt("seconds", seconds);
+        savedInstanseState.putBoolean("running", running);
+    }
 
 }
